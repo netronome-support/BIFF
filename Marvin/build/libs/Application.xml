@@ -1,0 +1,382 @@
+<Marvin>
+	<Application Mode="dDebug" Scale="auto" Height="800" Width="1680" EnableScrollBars="true">
+		<Network IP="localhost" PORT="5200"/>
+		<Title>"Marvin IVG Util"</Title>
+		<!--<Padding Top="10" Bottom="10" Left="10" Right="10"/>-->
+		<MainMenu Show="True">
+			<Menu Title="Test">
+				<MenuItem Text="Remote Dir" Task="RunDir" />
+			</Menu>
+		</MainMenu>
+		<Tabs Side="Left">
+			<Tab ID="tab-1" Title="Tab1"/>
+		</Tabs>
+	</Application>
+
+	<Tab ID="tab-1">
+		<Title>Performance</Title>
+		<Grid row="1" column="1">
+			<Widget File="Widget/IVG/Text.xml" row="1" column="1" Width="740" Height="50">
+				<InitialValue>Agilio 2x25G SRIOV Accelerated OVS-TC</InitialValue>
+			</Widget>	
+			<Grid row="2" column="1" hgap="10">
+				
+							
+				<Widget File="Widget/LCD/LCD.xml" row="1" column="1" Width="140">
+					<Title>Framesize</Title>
+					<MinionSrc ID="Framesize" Namespace="NFP-Pktgen"/>
+				</Widget>
+				
+				<Widget File="Widget/IVG/Framerate.xml" row="1" column="2" Width="180" Height="180">
+					<Title>Framerate (Mpps)</Title>
+					<MinionSrc ID="Framerate (Mpps)" Namespace="NFP-Pktgen"/>
+				</Widget>
+				
+				<Widget File="Widget/IVG/Throughput.xml" row="1" column="3" Width="180" Height="180">
+					<Title>Throughput (Gbps)</Title>
+					<MinionSrc ID="Throughput (Gbps)" Namespace="NFP-Pktgen"/>
+				</Widget>
+						
+				<Widget File="Widget/IVG/CPU.xml" row="1" column="4" Width="180" Height="180">
+					<Title>CPU Usage (%)</Title>
+					<MinionSrc ID="CPU" Namespace="NFP-Pktgen"/>
+				</Widget>
+			</Grid>		
+			<Widget File="Widget/Chart/ChartBar.xml" row="3" column="1" Width="600">
+				<Title>CPU Utilization</Title>
+				<xAxis Label="CPU Number" Count="10"/>
+				<!--<xAxis Label="CPU Number" Count="48"/>-->
+				<yAxis Label="% Utilization" MaxValue="100"/>
+				<Series Label = "CPU0" ID="Series1"/>
+				<Series Label = "CPU1" ID="Series2"/>
+				<Series Label = "CPU2" ID="Series3"/>
+				<Series Label = "CPU3" ID="Series4"/>
+				<Series Label = "CPU4" ID="Series5"/>
+				<Series Label = "CPU5" ID="Series6"/>
+				<Series Label = "CPU6" ID="Series7"/>
+				<Series Label = "CPU7" ID="Series8"/>
+				<Series Label = "CPU8" ID="Series9"/>
+				<Series Label = "CPU9" ID="Series10"/>
+				<!--<Series Label = "CPU10" ID="Series11"/>
+				<Series Label = "CPU11" ID="Series12"/>
+				<Series Label = "CPU12" ID="Series13"/>
+				<Series Label = "CPU13" ID="Series14"/>
+				<Series Label = "CPU14" ID="Series15"/>
+				<Series Label = "CPU15" ID="Series16"/>
+				<Series Label = "CPU16" ID="Series17"/>
+				<Series Label = "CPU17" ID="Series18"/>
+				<Series Label = "CPU18" ID="Series19"/>
+				<Series Label = "CPU19" ID="Series20"/>
+				<Series Label = "CPU20" ID="Series21"/>
+				<Series Label = "CPU21" ID="Series22"/>
+				<Series Label = "CPU22" ID="Series23"/>
+				<Series Label = "CPU23" ID="Series24"/>
+				<Series Label = "CPU24" ID="Series25"/>
+				<Series Label = "CPU25" ID="Series26"/>
+				<Series Label = "CPU26" ID="Series27"/>
+				<Series Label = "CPU27" ID="Series28"/>
+				<Series Label = "CPU28" ID="Series29"/>
+				<Series Label = "CPU29" ID="Series30"/>
+				<Series Label = "CPU30" ID="Series31"/>
+				<Series Label = "CPU31" ID="Series32"/>
+				<Series Label = "CPU32" ID="Series33"/>
+				<Series Label = "CPU33" ID="Series34"/>
+				<Series Label = "CPU34" ID="Series35"/>
+				<Series Label = "CPU35" ID="Series36"/>
+				<Series Label = "CPU36" ID="Series37"/>
+				<Series Label = "CPU37" ID="Series38"/>
+				<Series Label = "CPU38" ID="Series39"/>
+				<Series Label = "CPU39" ID="Series40"/>
+				<Series Label = "CPU40" ID="Series41"/>
+				<Series Label = "CPU41" ID="Series42"/>
+				<Series Label = "CPU42" ID="Series43"/>
+				<Series Label = "CPU43" ID="Series44"/>
+				<Series Label = "CPU44" ID="Series45"/>
+				<Series Label = "CPU45" ID="Series46"/>
+				<Series Label = "CPU46" ID="Series47"/>
+				<Series Label = "CPU47" ID="Series48"/>-->
+
+				<SeriesSet Title="CPU">
+					<MinionSrc ID="CPU0" Namespace="NFP-Pktgen" SeriesID="Series1"/>
+					<MinionSrc ID="CPU1" Namespace="NFP-Pktgen" SeriesID="Series2"/>
+					<MinionSrc ID="CPU2" Namespace="NFP-Pktgen" SeriesID="Series3"/>
+					<MinionSrc ID="CPU3" Namespace="NFP-Pktgen" SeriesID="Series4"/>
+					<MinionSrc ID="CPU4" Namespace="NFP-Pktgen" SeriesID="Series5"/>
+					<MinionSrc ID="CPU5" Namespace="NFP-Pktgen" SeriesID="Series6"/>
+					<MinionSrc ID="CPU6" Namespace="NFP-Pktgen" SeriesID="Series7"/>
+					<MinionSrc ID="CPU7" Namespace="NFP-Pktgen" SeriesID="Series8"/>
+					<MinionSrc ID="CPU8" Namespace="NFP-Pktgen" SeriesID="Series9"/>
+					<MinionSrc ID="CPU9" Namespace="NFP-Pktgen" SeriesID="Series10"/>
+					<!--<MinionSrc ID="CPU10" Namespace="NFP-Pktgen" SeriesID="Series11"/>
+					<MinionSrc ID="CPU11" Namespace="NFP-Pktgen" SeriesID="Series12"/>
+					<MinionSrc ID="CPU12" Namespace="NFP-Pktgen" SeriesID="Series13"/>
+					<MinionSrc ID="CPU13" Namespace="NFP-Pktgen" SeriesID="Series14"/>
+					<MinionSrc ID="CPU14" Namespace="NFP-Pktgen" SeriesID="Series15"/>
+					<MinionSrc ID="CPU15" Namespace="NFP-Pktgen" SeriesID="Series16"/>
+					<MinionSrc ID="CPU16" Namespace="NFP-Pktgen" SeriesID="Series17"/>
+					<MinionSrc ID="CPU17" Namespace="NFP-Pktgen" SeriesID="Series18"/>
+					<MinionSrc ID="CPU18" Namespace="NFP-Pktgen" SeriesID="Series19"/>
+					<MinionSrc ID="CPU19" Namespace="NFP-Pktgen" SeriesID="Series20"/>
+					<MinionSrc ID="CPU20" Namespace="NFP-Pktgen" SeriesID="Series21"/>
+					<MinionSrc ID="CPU21" Namespace="NFP-Pktgen" SeriesID="Series22"/>
+					<MinionSrc ID="CPU22" Namespace="NFP-Pktgen" SeriesID="Series23"/>
+					<MinionSrc ID="CPU23" Namespace="NFP-Pktgen" SeriesID="Series24"/>
+					<MinionSrc ID="CPU24" Namespace="NFP-Pktgen" SeriesID="Series25"/>
+					<MinionSrc ID="CPU25" Namespace="NFP-Pktgen" SeriesID="Series26"/>
+					<MinionSrc ID="CPU26" Namespace="NFP-Pktgen" SeriesID="Series27"/>
+					<MinionSrc ID="CPU27" Namespace="NFP-Pktgen" SeriesID="Series28"/>
+					<MinionSrc ID="CPU28" Namespace="NFP-Pktgen" SeriesID="Series29"/>
+					<MinionSrc ID="CPU29" Namespace="NFP-Pktgen" SeriesID="Series30"/>
+					<MinionSrc ID="CPU30" Namespace="NFP-Pktgen" SeriesID="Series31"/>
+					<MinionSrc ID="CPU31" Namespace="NFP-Pktgen" SeriesID="Series32"/>
+					<MinionSrc ID="CPU32" Namespace="NFP-Pktgen" SeriesID="Series33"/>
+					<MinionSrc ID="CPU33" Namespace="NFP-Pktgen" SeriesID="Series34"/>
+					<MinionSrc ID="CPU34" Namespace="NFP-Pktgen" SeriesID="Series35"/>
+					<MinionSrc ID="CPU35" Namespace="NFP-Pktgen" SeriesID="Series36"/>
+					<MinionSrc ID="CPU36" Namespace="NFP-Pktgen" SeriesID="Series37"/>
+					<MinionSrc ID="CPU37" Namespace="NFP-Pktgen" SeriesID="Series38"/>
+					<MinionSrc ID="CPU38" Namespace="NFP-Pktgen" SeriesID="Series39"/>
+					<MinionSrc ID="CPU39" Namespace="NFP-Pktgen" SeriesID="Series40"/>
+					<MinionSrc ID="CPU40" Namespace="NFP-Pktgen" SeriesID="Series41"/>
+					<MinionSrc ID="CPU41" Namespace="NFP-Pktgen" SeriesID="Series42"/>
+					<MinionSrc ID="CPU42" Namespace="NFP-Pktgen" SeriesID="Series43"/>
+					<MinionSrc ID="CPU43" Namespace="NFP-Pktgen" SeriesID="Series44"/>
+					<MinionSrc ID="CPU44" Namespace="NFP-Pktgen" SeriesID="Series45"/>
+					<MinionSrc ID="CPU45" Namespace="NFP-Pktgen" SeriesID="Series46"/>
+					<MinionSrc ID="CPU46" Namespace="NFP-Pktgen" SeriesID="Series47"/>
+					<MinionSrc ID="CPU47" Namespace="NFP-Pktgen" SeriesID="Series48"/>-->
+				</SeriesSet>
+
+				<StyleOverride>
+					<Item>-fx-legend-visible:false;-fx-bar-gap:1;-fx-category-gap:1;</Item>
+				</StyleOverride>
+			</Widget>
+		</Grid>
+		<Widget File="Spacer.xml" row="1" column="2" Width="5" Height="700">
+			<StyleOverride>
+				<Item>-fx-background-color: black</Item>
+			</StyleOverride>
+		</Widget>
+		<Grid row="1" column="3">
+			<Widget File="Widget/IVG/Text.xml" row="1" column="1" Width="740" Height="50">
+				<InitialValue>Intel 2x25G DPDK OVS</InitialValue>
+			</Widget>	
+			<Grid row="2" column="1" hgap="10">
+				<Padding Top="5" Bottom="5" Left="10" Right="10"/>
+							
+				<Widget File="Widget/LCD/LCD.xml" row="1" column="1" Width="140">
+					<Title>Framesize</Title>
+					<MinionSrc ID="Framesize" Namespace="Intel-Pktgen"/>
+				</Widget>
+				
+				<Widget File="Widget/IVG/Framerate.xml" row="1" column="2" Width="180" Height="180">
+					<Title>Framerate (Mpps)</Title>
+					<MinionSrc ID="Framerate (Mpps)" Namespace="Intel-Pktgen"/>
+				</Widget>
+				
+				<Widget File="Widget/IVG/Throughput.xml" row="1" column="3" Width="180" Height="180">
+					<Title>Throughput (Gbps)</Title>
+					<MinionSrc ID="Throughput (Gbps)" Namespace="Intel-Pktgen"/>
+				</Widget>
+						
+				<Widget File="Widget/IVG/CPU.xml" row="1" column="4" Width="180" Height="180">
+					<Title>CPU Usage (%)</Title>
+					<MinionSrc ID="CPU" Namespace="Intel-Pktgen"/>
+				</Widget>
+			</Grid>
+			
+			<Widget File="Widget/Chart/ChartBar.xml" row="3" column="1" Width="600">
+				<Title>CPU Utilization</Title>
+				<xAxis Label="CPU Number" Count="10" TickLabelVisible="False"/>
+				<yAxis Label="% Utilization" MaxValue="100"/>
+				<Series Label = "Core1" ID="Series1"/>
+				<Series Label = "CPU1" ID="Series2"/>
+				<Series Label = "CPU2" ID="Series3"/>
+				<Series Label = "CPU3" ID="Series4"/>
+				<Series Label = "CPU4" ID="Series5"/>
+				<Series Label = "CPU5" ID="Series6"/>
+				<Series Label = "CPU6" ID="Series7"/>
+				<Series Label = "CPU7" ID="Series8"/>
+				<Series Label = "CPU8" ID="Series9"/>
+				<Series Label = "CPU9" ID="Series10"/>
+				<!--<Series Label = "CPU10" ID="Series11"/>
+				<Series Label = "CPU11" ID="Series12"/>
+				<Series Label = "CPU12" ID="Series13"/>
+				<Series Label = "CPU13" ID="Series14"/>
+				<Series Label = "CPU14" ID="Series15"/>
+				<Series Label = "CPU15" ID="Series16"/>
+				<Series Label = "CPU16" ID="Series17"/>
+				<Series Label = "CPU17" ID="Series18"/>
+				<Series Label = "CPU18" ID="Series19"/>
+				<Series Label = "CPU19" ID="Series20"/>
+				<Series Label = "CPU20" ID="Series21"/>
+				<Series Label = "CPU21" ID="Series22"/>
+				<Series Label = "CPU22" ID="Series23"/>
+				<Series Label = "CPU23" ID="Series24"/>
+				<Series Label = "CPU24" ID="Series25"/>
+				<Series Label = "CPU25" ID="Series26"/>
+				<Series Label = "CPU26" ID="Series27"/>
+				<Series Label = "CPU27" ID="Series28"/>
+				<Series Label = "CPU28" ID="Series29"/>
+				<Series Label = "CPU29" ID="Series30"/>
+				<Series Label = "CPU30" ID="Series31"/>
+				<Series Label = "CPU31" ID="Series32"/>
+				<Series Label = "CPU32" ID="Series33"/>
+				<Series Label = "CPU33" ID="Series34"/>
+				<Series Label = "CPU34" ID="Series35"/>
+				<Series Label = "CPU35" ID="Series36"/>
+				<Series Label = "CPU36" ID="Series37"/>
+				<Series Label = "CPU37" ID="Series38"/>
+				<Series Label = "CPU38" ID="Series39"/>
+				<Series Label = "CPU39" ID="Series40"/>
+				<Series Label = "CPU40" ID="Series41"/>
+				<Series Label = "CPU41" ID="Series42"/>
+				<Series Label = "CPU42" ID="Series43"/>
+				<Series Label = "CPU43" ID="Series44"/>
+				<Series Label = "CPU44" ID="Series45"/>
+				<Series Label = "CPU45" ID="Series46"/>
+				<Series Label = "CPU46" ID="Series47"/>
+				<Series Label = "CPU47" ID="Series48"/>-->
+
+				<SeriesSet Title="Core 1">
+					<MinionSrc ID="CPU0" Namespace="Intel-Pktgen" SeriesID="Series1"/>
+				</SeriesSet>
+				<SeriesSet Title="Core 2">
+					<MinionSrc ID="CPU1" Namespace="Intel-Pktgen" SeriesID="Series2"/>
+					<MinionSrc ID="CPU2" Namespace="Intel-Pktgen" SeriesID="Series3"/>
+					<MinionSrc ID="CPU3" Namespace="Intel-Pktgen" SeriesID="Series4"/>
+					<MinionSrc ID="CPU4" Namespace="Intel-Pktgen" SeriesID="Series5"/>
+					<MinionSrc ID="CPU5" Namespace="Intel-Pktgen" SeriesID="Series6"/>
+					<MinionSrc ID="CPU6" Namespace="Intel-Pktgen" SeriesID="Series7"/>
+					<MinionSrc ID="CPU7" Namespace="Intel-Pktgen" SeriesID="Series8"/>
+					<MinionSrc ID="CPU8" Namespace="Intel-Pktgen" SeriesID="Series9"/>
+					<MinionSrc ID="CPU9" Namespace="Intel-Pktgen" SeriesID="Series10"/>
+					<!--<MinionSrc ID="CPU10" Namespace="Intel-Pktgen" SeriesID="Series11"/>
+					<MinionSrc ID="CPU11" Namespace="Intel-Pktgen" SeriesID="Series12"/>
+					<MinionSrc ID="CPU12" Namespace="Intel-Pktgen" SeriesID="Series13"/>
+					<MinionSrc ID="CPU13" Namespace="Intel-Pktgen" SeriesID="Series14"/>
+					<MinionSrc ID="CPU14" Namespace="Intel-Pktgen" SeriesID="Series15"/>
+					<MinionSrc ID="CPU15" Namespace="Intel-Pktgen" SeriesID="Series16"/>
+					<MinionSrc ID="CPU16" Namespace="Intel-Pktgen" SeriesID="Series17"/>
+					<MinionSrc ID="CPU17" Namespace="Intel-Pktgen" SeriesID="Series18"/>
+					<MinionSrc ID="CPU18" Namespace="Intel-Pktgen" SeriesID="Series19"/>
+					<MinionSrc ID="CPU19" Namespace="Intel-Pktgen" SeriesID="Series20"/>
+					<MinionSrc ID="CPU20" Namespace="Intel-Pktgen" SeriesID="Series21"/>
+					<MinionSrc ID="CPU21" Namespace="Intel-Pktgen" SeriesID="Series22"/>
+					<MinionSrc ID="CPU22" Namespace="Intel-Pktgen" SeriesID="Series23"/>
+					<MinionSrc ID="CPU23" Namespace="Intel-Pktgen" SeriesID="Series24"/>
+					<MinionSrc ID="CPU24" Namespace="Intel-Pktgen" SeriesID="Series25"/>
+					<MinionSrc ID="CPU25" Namespace="Intel-Pktgen" SeriesID="Series26"/>
+					<MinionSrc ID="CPU26" Namespace="Intel-Pktgen" SeriesID="Series27"/>
+					<MinionSrc ID="CPU27" Namespace="Intel-Pktgen" SeriesID="Series28"/>
+					<MinionSrc ID="CPU28" Namespace="Intel-Pktgen" SeriesID="Series29"/>
+					<MinionSrc ID="CPU29" Namespace="Intel-Pktgen" SeriesID="Series30"/>
+					<MinionSrc ID="CPU30" Namespace="Intel-Pktgen" SeriesID="Series31"/>
+					<MinionSrc ID="CPU31" Namespace="Intel-Pktgen" SeriesID="Series32"/>
+					<MinionSrc ID="CPU32" Namespace="Intel-Pktgen" SeriesID="Series33"/>
+					<MinionSrc ID="CPU33" Namespace="Intel-Pktgen" SeriesID="Series34"/>
+					<MinionSrc ID="CPU34" Namespace="Intel-Pktgen" SeriesID="Series35"/>
+					<MinionSrc ID="CPU35" Namespace="Intel-Pktgen" SeriesID="Series36"/>
+					<MinionSrc ID="CPU36" Namespace="Intel-Pktgen" SeriesID="Series37"/>
+					<MinionSrc ID="CPU37" Namespace="Intel-Pktgen" SeriesID="Series38"/>
+					<MinionSrc ID="CPU38" Namespace="Intel-Pktgen" SeriesID="Series39"/>
+					<MinionSrc ID="CPU39" Namespace="Intel-Pktgen" SeriesID="Series40"/>
+					<MinionSrc ID="CPU40" Namespace="Intel-Pktgen" SeriesID="Series41"/>
+					<MinionSrc ID="CPU41" Namespace="Intel-Pktgen" SeriesID="Series42"/>
+					<MinionSrc ID="CPU42" Namespace="Intel-Pktgen" SeriesID="Series43"/>
+					<MinionSrc ID="CPU43" Namespace="Intel-Pktgen" SeriesID="Series44"/>
+					<MinionSrc ID="CPU44" Namespace="Intel-Pktgen" SeriesID="Series45"/>
+					<MinionSrc ID="CPU45" Namespace="Intel-Pktgen" SeriesID="Series46"/>
+					<MinionSrc ID="CPU46" Namespace="Intel-Pktgen" SeriesID="Series47"/>
+					<MinionSrc ID="CPU47" Namespace="Intel-Pktgen" SeriesID="Series48"/>-->
+				</SeriesSet>
+				<StyleOverride>
+					<Item>-fx-legend-visible:false;-fx-bar-gap:1;-fx-category-gap:1;</Item>
+				</StyleOverride>
+			</Widget>
+				<Grid row="3" column="1" Width="600">
+					<Padding Top="60" Bottom="5" Left="190"/>
+					<Widget File="Widget/IVG/Text.xml" row="1" column="1" Width="250" Height="51">
+					<InitialValue>CPU0:</InitialValue>
+					<StyleOverride >
+						<Item>-fx-rotate:-90</Item>
+						<Item>-fx-font-size:1.8em</Item>
+					</StyleOverride>
+					<MinionSrc ID="CORE0" Namespace="Intel-Pktgen"/>
+				</Widget>	
+				<Widget File="Widget/IVG/Text.xml" row="1" column="2" Width="250" Height="51">
+					<InitialValue>CPU1:</InitialValue>
+					<StyleOverride >
+						<Item>-fx-rotate:-90</Item>
+						<Item>-fx-font-size:1.8em</Item>
+					</StyleOverride>
+					<MinionSrc ID="CORE1" Namespace="Intel-Pktgen"/>
+				</Widget>
+				<Widget File="Widget/IVG/Text.xml" row="1" column="3" Width="250" Height="51">
+					<InitialValue>CPU2:</InitialValue>
+					<StyleOverride >
+						<Item>-fx-rotate:-90</Item>
+						<Item>-fx-font-size:1.8em</Item>
+					</StyleOverride>
+					<MinionSrc ID="CORE2" Namespace="Intel-Pktgen"/>
+				</Widget>
+				<Widget File="Widget/IVG/Text.xml" row="1" column="4" Width="250" Height="51">
+					<InitialValue>CPU3:</InitialValue>
+					<StyleOverride >
+						<Item>-fx-rotate:-90</Item>
+						<Item>-fx-font-size:1.8em</Item>
+					</StyleOverride>
+					<MinionSrc ID="CORE3" Namespace="Intel-Pktgen"/>
+				</Widget>
+				<Widget File="Widget/IVG/Text.xml" row="1" column="5" Width="250" Height="51">
+					<InitialValue>CPU4:</InitialValue>
+					<StyleOverride >
+						<Item>-fx-rotate:-90</Item>
+						<Item>-fx-font-size:1.8em</Item>
+					</StyleOverride>
+					<MinionSrc ID="CORE4" Namespace="Intel-Pktgen"/>
+				</Widget>
+				<Widget File="Widget/IVG/Text.xml" row="1" column="6" Width="250" Height="51">
+					<InitialValue>CPU5:</InitialValue>
+					<StyleOverride >
+						<Item>-fx-rotate:-90</Item>
+						<Item>-fx-font-size:1.8em</Item>
+					</StyleOverride>
+					<MinionSrc ID="CORE5" Namespace="Intel-Pktgen"/>
+				</Widget>
+				<Widget File="Widget/IVG/Text.xml" row="1" column="7" Width="250" Height="51">
+					<InitialValue>CPU6:</InitialValue>
+					<StyleOverride >
+						<Item>-fx-rotate:-90</Item>
+						<Item>-fx-font-size:1.8em</Item>
+					</StyleOverride>
+					<MinionSrc ID="CORE6" Namespace="Intel-Pktgen"/>
+				</Widget>
+				<Widget File="Widget/IVG/Text.xml" row="1" column="8" Width="250" Height="51">
+					<InitialValue>CPU7:</InitialValue>
+					<StyleOverride >
+						<Item>-fx-rotate:-90</Item>
+						<Item>-fx-font-size:1.8em</Item>
+					</StyleOverride>
+					<MinionSrc ID="CORE7" Namespace="Intel-Pktgen"/>
+				</Widget>
+				<Widget File="Widget/IVG/Text.xml" row="1" column="9" Width="250" Height="51">
+					<InitialValue>CPU8:</InitialValue>
+					<StyleOverride >
+						<Item>-fx-rotate:-90</Item>
+						<Item>-fx-font-size:1.8em</Item>
+					</StyleOverride>
+					<MinionSrc ID="CORE8" Namespace="Intel-Pktgen"/>
+				</Widget>
+				<Widget File="Widget/IVG/Text.xml" row="1" column="10" Width="250" Height="51">
+					<InitialValue>CPU9:</InitialValue>
+					<StyleOverride >
+						<Item>-fx-rotate:-90</Item>
+						<Item>-fx-font-size:1.8em</Item>
+					</StyleOverride>
+					<MinionSrc ID="CORE9" Namespace="Intel-Pktgen"/>
+				</Widget>-->
+			</Grid>
+		</Grid>
+	</Tab>	
+</Marvin>

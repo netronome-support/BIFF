@@ -1,0 +1,349 @@
+<Minion>
+    <AliasList>
+        <Alias MyFreq="100"/>
+        <Alias stingray="172.26.1.147"/>
+    </AliasList>
+	
+	<Namespace>
+		<Name>CPU-Util</Name>
+        <DefaultFrequency>$(MyFreq)</DefaultFrequency>
+        <TargetConnection IP="localhost" PORT="5100"/>
+		
+<Collector ID="CPU0" SendOnlyOnChange="False" ProcessThread="0">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>0</Param>
+</Collector>
+
+<Collector ID="CPU1" SendOnlyOnChange="False" ProcessThread="1">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>1</Param>
+</Collector>
+
+<Collector ID="CPU2" SendOnlyOnChange="False" ProcessThread="2">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>2</Param>
+</Collector>
+
+<Collector ID="CPU3" SendOnlyOnChange="False" ProcessThread="3">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>3</Param>
+</Collector>
+
+<Collector ID="CPU4" SendOnlyOnChange="False" ProcessThread="4">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>4</Param>
+</Collector>
+
+<Collector ID="CPU5" SendOnlyOnChange="False" ProcessThread="5">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>5</Param>
+</Collector>
+
+<Collector ID="CPU6" SendOnlyOnChange="False" ProcessThread="6">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>6</Param>
+</Collector>
+
+<Collector ID="CPU7" SendOnlyOnChange="False" ProcessThread="7">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>7</Param>
+</Collector>
+
+<Collector ID="CPU8" SendOnlyOnChange="False" ProcessThread="8">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>8</Param>
+</Collector>
+
+<Collector ID="CPU9" SendOnlyOnChange="False" ProcessThread="9">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>9</Param>
+</Collector>
+
+<Collector ID="CPU10" SendOnlyOnChange="False" ProcessThread="10">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>10</Param>
+</Collector>
+
+<Collector ID="CPU11" SendOnlyOnChange="False" ProcessThread="11">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>11</Param>
+</Collector>
+
+<Collector ID="CPU12" SendOnlyOnChange="False" ProcessThread="12">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>12</Param>
+</Collector>
+
+<Collector ID="CPU13" SendOnlyOnChange="False" ProcessThread="13">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>13</Param>
+</Collector>
+
+<Collector ID="CPU14" SendOnlyOnChange="False" ProcessThread="14">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>14</Param>
+</Collector>
+
+<Collector ID="CPU15" SendOnlyOnChange="False" ProcessThread="15">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>15</Param>
+</Collector>
+
+<Collector ID="CPU16" SendOnlyOnChange="False" ProcessThread="16">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>16</Param>
+</Collector>
+
+<Collector ID="CPU17" SendOnlyOnChange="False" ProcessThread="17">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>17</Param>
+</Collector>
+
+<Collector ID="CPU18" SendOnlyOnChange="False" ProcessThread="18">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>18</Param>
+</Collector>
+
+<Collector ID="CPU19" SendOnlyOnChange="False" ProcessThread="19">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>19</Param>
+</Collector>
+
+<Collector ID="CPU20" SendOnlyOnChange="False" ProcessThread="20">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>20</Param>
+</Collector>
+
+<Collector ID="CPU21" SendOnlyOnChange="False" ProcessThread="21">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>21</Param>
+</Collector>
+
+<Collector ID="CPU22" SendOnlyOnChange="False" ProcessThread="22">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>22</Param>
+</Collector>
+
+<Collector ID="CPU23" SendOnlyOnChange="False" ProcessThread="23">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>23</Param>
+</Collector>
+
+<Collector ID="CPU24" SendOnlyOnChange="False" ProcessThread="24">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>24</Param>
+</Collector>
+
+<Collector ID="CPU25" SendOnlyOnChange="False" ProcessThread="25">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>25</Param>
+</Collector>
+
+<Collector ID="CPU26" SendOnlyOnChange="False" ProcessThread="26">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>26</Param>
+</Collector>
+
+<Collector ID="CPU27" SendOnlyOnChange="False" ProcessThread="27">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>27</Param>
+</Collector>
+
+<Collector ID="CPU28" SendOnlyOnChange="False" ProcessThread="28">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>28</Param>
+</Collector>
+
+<Collector ID="CPU29" SendOnlyOnChange="False" ProcessThread="29">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>29</Param>
+</Collector>
+
+<Collector ID="CPU30" SendOnlyOnChange="False" ProcessThread="30">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>30</Param>
+</Collector>
+
+<Collector ID="CPU31" SendOnlyOnChange="False" ProcessThread="31">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>31</Param>
+</Collector>
+
+<Collector ID="CPU32" SendOnlyOnChange="False" ProcessThread="32">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>32</Param>
+</Collector>
+
+<Collector ID="CPU33" SendOnlyOnChange="False" ProcessThread="33">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>33</Param>
+</Collector>
+
+<Collector ID="CPU34" SendOnlyOnChange="False" ProcessThread="34">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>34</Param>
+</Collector>
+
+<Collector ID="CPU35" SendOnlyOnChange="False" ProcessThread="35">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>35</Param>
+</Collector>
+
+<Collector ID="CPU36" SendOnlyOnChange="False" ProcessThread="36">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>36</Param>
+</Collector>
+
+<Collector ID="CPU37" SendOnlyOnChange="False" ProcessThread="37">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>37</Param>
+</Collector>
+
+<Collector ID="CPU38" SendOnlyOnChange="False" ProcessThread="38">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>38</Param>
+</Collector>
+
+<Collector ID="CPU39" SendOnlyOnChange="False" ProcessThread="39">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>39</Param>
+</Collector>
+
+<Collector ID="CPU40" SendOnlyOnChange="False" ProcessThread="40">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>40</Param>
+</Collector>
+
+<Collector ID="CPU41" SendOnlyOnChange="False" ProcessThread="41">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>41</Param>
+</Collector>
+
+<Collector ID="CPU42" SendOnlyOnChange="False" ProcessThread="42">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>42</Param>
+</Collector>
+
+<Collector ID="CPU43" SendOnlyOnChange="False" ProcessThread="43">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>43</Param>
+</Collector>
+
+<Collector ID="CPU44" SendOnlyOnChange="False" ProcessThread="44">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>44</Param>
+</Collector>
+
+<Collector ID="CPU45" SendOnlyOnChange="False" ProcessThread="45">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>45</Param>
+</Collector>
+
+<Collector ID="CPU46" SendOnlyOnChange="False" ProcessThread="46">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>46</Param>
+</Collector>
+
+<Collector ID="CPU47" SendOnlyOnChange="False" ProcessThread="47">
+    <Executable>Collectors/Core.py</Executable>
+    <Param>getData</Param>
+    <Param>$(stingray)</Param>
+    <Param>47</Param>
+</Collector>
+		
+	</Namespace>
+</Minion>

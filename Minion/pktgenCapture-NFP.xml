@@ -1,0 +1,51 @@
+<Minion>
+    <AliasList>
+        <Alias MyFreq="100"/>
+        <Alias stingray="172.26.1.167"/>
+    </AliasList>
+	
+	<Namespace>
+		<Name>NFP-Pktgen</Name>
+        <DefaultFrequency>$(MyFreq)</DefaultFrequency>
+        <!--<TargetConnection IP="localhost" PORT="5100"/>-->
+		<TargetConnection IP="172.26.0.243" PORT="5100"/>
+		
+		<Collector ID="Framesize" SendOnlyOnChange="False">
+            <Executable>Collectors/pktgenCapture.py</Executable>
+            <Param>getFramesize</Param>
+            <!--<Param>$(stingray)</Param>-->
+			<Param>/root/capture.txt</Param>
+        </Collector>
+
+        <Collector ID="Framerate (Mpps)" SendOnlyOnChange="False">
+            <Executable>Collectors/pktgenCapture.py</Executable>
+            <Param>getFramerate</Param>
+            <!--<Param>$(stingray)</Param>-->
+			<Param>/root/capture.txt</Param>
+        </Collector>
+
+        <Collector ID="Throughput (Gbps)" SendOnlyOnChange="False">
+            <Executable>Collectors/pktgenCapture.py</Executable>
+            <Param>getFramedata</Param>
+            <!--<Param>$(stingray)</Param>-->
+			<Param>/root/capture.txt</Param>
+        </Collector>
+
+        <Collector ID="CPU" SendOnlyOnChange="False">
+            <Executable>Collectors/CPU2.py</Executable>
+            <Param>getData</Param>
+            <Param>$(stingray)</Param>
+        </Collector>
+		
+		<Collector ID="CPU Usage" SendOnlyOnChange="False">
+			<Executable>Collectors/Core3.py</Executable>
+			<Param>getData</Param>
+			<Param>$(stingray)</Param>
+		</Collector>
+		
+		<DynamicCollector Prefix="CPU" OnlySendOnChange="True">
+            <File>cpu.txt</File>
+        </DynamicCollector>
+		
+	</Namespace>
+</Minion>
